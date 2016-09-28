@@ -1,5 +1,11 @@
 <px-card header-text='Menu 2'>
-    <h3>Second Card</h3>
+    <h3>Temperaturas de aviones</h3>
+
+    <label>Número de vuelo (sólo números de 700103 a 700197)</label>
+    <input type="number" ng-model="num">
+    <button ng-click="consumela()">Submit</button><br>
+
+    {{ data }}
 
 </px-card>
 
