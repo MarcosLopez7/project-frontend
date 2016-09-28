@@ -1,6 +1,10 @@
 <px-card header-text='Menu 1'>
 
-    <h3>First Card</h3>
+    <h3>Vuelos Cancelados</h3>
 
-
+    <ul>
+        <li ng-repeat="info in data">
+            Serial: {{ info.engineSerial }}, Tiempo: {{ info.tiempo }}
+        </li>
+    </ul>
 </px-card>
