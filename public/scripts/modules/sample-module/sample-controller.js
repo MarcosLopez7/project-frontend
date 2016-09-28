@@ -10,6 +10,14 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
             }).
             success(function (response) {
 
+                var arr = []
+                Object.keys(response.cancelados).map(function (value, key) {
+                    var tempObj = response.cancelados[key];
+                    var temp = [parseInt(tempObj.engineSerial),parseInt(tempObj.tiempo)];
+                    arr.push(temp);
+                });                
+
+                $scope.tiempo = arr;
                 $scope.data = response.cancelados;
 
             }).

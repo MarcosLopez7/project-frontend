@@ -7,4 +7,11 @@
             Serial: {{ info.engineSerial }}, Tiempo: {{ info.tiempo }}
         </li>
     </ul>
+
+
+    {{tiempo}}
+
+    <px-simple-line-chart line-data="{{tiempo}}"></px-simple-line-chart>
+    <px-simple-line-chart line-data={{tiempo}}></px-simple-line-chart>
+
 </px-card>
