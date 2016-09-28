@@ -1,0 +1,21 @@
+{
+    "inputs": {
+        "headerFields":{
+            "fields": {
+                "serialNumber": {
+                    "name": "Serial Number",
+                    "type": "text",
+                    "value": ""
+                }
+            }
+        },
+        "engineFields": {
+            "fields": {
+
+            }
+        }
+    },
+    "outputs": {
+
+    }
+}

@@ -1,0 +1,32 @@
+// Settings
+$inuit-webfont-path: "./../bower_components/px-typography-design/type";
+$inuit-enable-toggle--small : true;
+
+@import "./../bower_components/px-defaults-design/_settings.defaults.scss";
+@import "./../bower_components/px-colors-design/_settings.colors.scss";
+@import "./../bower_components/inuit-responsive-settings/_settings.responsive.scss";
+
+// Tools
+@import "./../bower_components/px-functions-design/_tools.functions.scss";
+@import "./../bower_components/px-mixins-design/_tools.mixins.scss";
+@import "./../bower_components/inuit-responsive-tools/_tools.responsive.scss";
+
+// Generic
+@import "./../bower_components/px-normalize-design/_generic.normalize.scss";
+@import "./../bower_components/px-box-sizing-design/_generic.box-sizing.scss";
+@import "./../bower_components/px-helpers-design/_generic.helpers.scss";
+
+// Base
+@import "./../bower_components/px-viewport-design/_base.viewport.scss";
+@import "./../bower_components/px-typography-design/base.typography.scss";
+
+// Meta
+
+
+// Objects
+
+// Components
+@import "./../bower_components/px-toggle-design/_objects.toggle.scss";
+
+// Trumps
+@import "./../bower_components/px-widths-responsive-design/_trumps.widths-responsive.scss";
