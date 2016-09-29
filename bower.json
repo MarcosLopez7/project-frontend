@@ -54,7 +54,8 @@
     "inuit-starter-kit": "^0.2.9",
     "px-starter-kit-design": "git://github.com/PredixDev/px-starter-kit-design.git#^0.5.5",
     "d3-queue": "^3.0.1",
-    "px-vis-xy-chart": "^0.0.12"
+    "px-vis-xy-chart": "^0.0.12",
+    "px-simple-horizontal-bar-chart": "^0.6.1"
   },
   "resolutions": {
     "es6-promise": "~v3.0.2",

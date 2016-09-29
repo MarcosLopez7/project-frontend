@@ -10,14 +10,21 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
             }).
             success(function (response) {
 
-                var arr = [];
+                var tiempo = [];
+                var serial = [];
+                var color = [];
                 Object.keys(response.cancelados).map(function (value, key) {
                     var tempObj = response.cancelados[key];
-                    var temp = [parseInt(tempObj.engineSerial),parseInt(tempObj.tiempo)];
-                    arr.push(temp);
+                    tiempo.push(parseInt(tempObj.tiempo));
+                    serial.push(tempObj.engineSerial);
+                    //var temp = [parseInt(tempObj.engineSerial),parseInt(tempObj.tiempo)];
                 });
-
-                $scope.tiempo = arr;
+                for(var i = 0; i < tiempo.length;i++){
+                    color.push('#'+Math.floor(Math.random()*16777215).toString(16));
+                }
+                $scope.color = color;
+                $scope.tiempo = tiempo;
+                $scope.serial = serial;
                 $scope.data = response.cancelados;
 
             }).

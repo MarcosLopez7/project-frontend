@@ -8,10 +8,66 @@
         </li>
     </ul>
 
-
     {{tiempo}}
 
-    <px-simple-line-chart line-data="{{tiempo}}"></px-simple-line-chart>
-    <px-simple-line-chart line-data={{tiempo}}></px-simple-line-chart>
+<!--
+    <px-simple-horizontal-bar-chart
+        chart-data={{tiempo}}
+        width="auto"
+        height="auto"
+        legend-labels={{serial}}
+        colors={{color}}
+        bar-labels="values">
+    </px-simple-horizontal-bar-chart>
 
+    <px-vis-xy-chart
+      id="chart"
+      chart-data="{{data}}"
+      width="616.046875"
+      height="305"
+      margin='{ "top": "30", "bottom": "60", "left": "75", "right": "20" }'
+      x-axis-config='{"title": "Engine Serial",
+       "labelPosition": "center",
+       "orientation": "bottom"}'
+      y-axis-config='{"title": "Time",
+        "labelPosition": "center",
+        "orientation": "left"}'
+      register-config='{
+        "height": 50,
+        "type": "horizontal"}'
+      series-config='{
+          "firstSerie": {
+            "type": "scatter",
+            "name": "Tiempo",
+            "xAxisUnit": "",
+            "yAxisUnit": "min",
+            "x": "engineSerial",
+            "y":"tiempo"
+          }
+        }'
+      default-series-config='{
+        "x": "engineSerial",
+        "xMin": "dynamic",
+        "xMax": "dynamic",
+        "yMin": "dynamic",
+        "yMax": "dynamic"
+      }'
+    </px-vis-xy-chart>
+
+    <px-chart>
+        <px-chart-series-bar id="hpt-acc-position-cruise" data="{{
+            [
+              [700101, 12718],
+              [700106, 15005],
+              [700108, 15080],
+              [700111, 16254],
+              [700144, 12006],
+              [700147, 14660],
+              [700166, 12030],
+              [700192, 12823]
+            ]
+        }}">
+        </px-chart-series-bar>
+    </px-chart>
+-->
 </px-card>
