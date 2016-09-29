@@ -40,6 +40,12 @@ define(['angular', 'angular-ui-router'], function(angular) {
                 url: '/second',
                 templateUrl: 'views/second-card.html',
                 controller: 'SampleCtrl2'
+            })
+            .state('third', {
+                //parent: 'secure',
+                url: '/third',
+                templateUrl: 'views/third-card.html',
+                controller: 'Ctrl3'
             });
 
 

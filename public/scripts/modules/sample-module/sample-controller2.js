@@ -24,7 +24,7 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
                 }
 
                 console.log(arr);
-                /*var min = 300, max = 0;
+                var min = 300, max = 0;
                 Object.keys(response.temperaturas).map(function (value, key) {
                     var tempObj = parseInt(response.temperaturas[key].temp);
                     var temp = [key,tempObj];
@@ -34,7 +34,7 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
                 });
                 $scope.min = min;
                 $scope.max = max;
-                $scope.temperaturas = arr;*/
+                $scope.temperaturas = arr;
                 $scope.data = arr;
 
             }).

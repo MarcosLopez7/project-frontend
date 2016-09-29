@@ -39,8 +39,9 @@ define([
             name: 'Predix Dashboard',
             session: {},
             tabs: [
-                {icon: 'fa-line-chart', state: 'first', label: 'First Menu'},
-                {icon: 'fa-bar-chart', state: 'second', label: 'Second Menu'}
+                {icon: 'fa-line-chart', state: 'first', label: 'Motores dañanos'},
+                {icon: 'fa-bar-chart', state: 'second', label: 'Tiempo acumulado'},
+                {icon: 'fa-bar-chart', state: 'third', label: 'Opción'}
             ]
         };
         $http.get('/userinfo').success(function(data) {
@@ -48,7 +49,7 @@ define([
         }).error(function() {
             $scope.userInfo = '';
         });
-        
+
         $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
             if (angular.isObject(error) && angular.isString(error.code)) {
                 switch (error.code) {
