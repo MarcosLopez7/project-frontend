@@ -2,9 +2,9 @@
     <h3>Temperaturas de aviones</h3>
 
     <label>Número de vuelo (sólo números de 700103 a 700197)</label>
-    <input type="number" ng-model="num">
-    <button ng-click="consumela()">Submit</button><br>
-    
+    <input type="number" class="inputNumber" ng-model="num">
+    <button class="button button4" ng-click="consumela()">Submit</button><br>
+
     <br><br>
     <px-simple-line-chart width="auto" min="0" max={{max}} line-data="{{data}}" min-label="min" max-label="{{max}}"></px-simple-line-chart>
 
