@@ -66,6 +66,7 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
                     } else {
                         $scope.rutas_rest = "El motor ya está dañado";
                         $scope.vuelos_rest = 0;
+                        $scope.sugerencia = "Cambia el motor";
                         $scope.cargado = true;
                     }
                 } else {
@@ -87,6 +88,23 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
                 $scope.lugar = response.minimo.ciudad;
                 $scope.costo = response.minimo.precio;
                 $scope.vuelos_rest = $scope.rutas_rest * response.ciudades.length;
+                $scope.vuelos = response.ciudades;
+
+                for (var i = 0; i < response.ciudades.length; i++) {
+                    if (response.minimo.ciudad == response.ciudades[i].ciudad) {
+                        if (i == 0) {
+                            $scope.sugerencia = "Te recomendamos que antes de empezar el ciclo " + $scope.rutas_rest + " " +
+                                "cambien el motor para evitar cancelaciones"
+                        } else {
+                            console.log("que pedo?");
+                            $scope.sugerencia = "Te recomendamos que cuando el motor esté en el ciclo " + ($scope.rutas_rest - 1)
+                                + ", específicamente en el vuelo de " + response.ciudades[i - 1].ciudad + " a " + $scope.lugar
+                                + " se programe un cambio de motor para evitar cancelaciones";
+                        }
+                        break;
+                    }
+                }
+
                 $scope.cargado = true;
             }).error(function (response) {
                 console.log(response);

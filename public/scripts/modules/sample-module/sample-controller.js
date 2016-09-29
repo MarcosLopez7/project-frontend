@@ -13,10 +13,13 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
                 var tiempo = [];
                 var serial = [];
                 var color = [];
+                var costoTotal = 0;
+
                 Object.keys(response.cancelados).map(function (value, key) {
                     var tempObj = response.cancelados[key];
                     tiempo.push(parseInt(tempObj.tiempo));
                     serial.push(tempObj.engineSerial);
+                    costoTotal += parseInt(response.cancelados[key].precio);
                     //var temp = [parseInt(tempObj.engineSerial),parseInt(tempObj.tiempo)];
                 });
                 for(var i = 0; i < tiempo.length;i++){
@@ -26,6 +29,7 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
                 $scope.tiempo = tiempo;
                 $scope.serial = serial;
                 $scope.data = response.cancelados;
+                $scope.costo = costoTotal;
 
             }).
             error(function (response) {
