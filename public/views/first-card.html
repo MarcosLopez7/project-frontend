@@ -2,9 +2,9 @@
 
     <h3>Vuelos Cancelados</h3>
 
-    <ul>
-        <li ng-repeat="info in data">
-            <p>Serial: {{ info.engineSerial }}, Tiempo: {{ info.tiempo }}</p>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="info in data">
+            <div style="display:inline;">Serial: {{ info.engineSerial }}</div> <div style="padding-left:20em; display:inline;" > Tiempo: {{ info.tiempo }}</div>
         </li>
     </ul>
 
