@@ -5,7 +5,7 @@
     <input type="number" ng-model="num">
     <button ng-click="consumela()">Submit</button><br>
 
-    <px-simple-line-chart width="auto" min="150" max="250" line-data="{{temperaturas}}" min-label="150" max-label="250"></px-simple-line-chart>
+    <px-simple-line-chart width="auto" min={{min}} max={{max}} line-data="{{temperaturas}}" min-label="{{min}}" max-label="{{max}}"></px-simple-line-chart>
 
     {{ data }}
 
