@@ -5,6 +5,9 @@
     <input type="number" ng-model="num">
     <button ng-click="consumela()">Submit</button><br>
 
+    serial: {{ num }}
+    ruta: {{ ruta }}
+    <br><br>
     <px-simple-line-chart width="auto" min={{min}} max={{max}} line-data="{{temperaturas}}" min-label="{{min}}" max-label="{{max}}"></px-simple-line-chart>
 
     {{ data }}

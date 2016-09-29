@@ -10,8 +10,21 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
             }).
             success(function (response) {
 
+                $scope.serial = response.engine_serial;
+                $scope.ruta = response.ruta;
                 var arr = [];
-                var min = 300, max = 0;
+                var acumulado = 0;
+
+                for (var i = 0; i < response.temperaturas.length; i++) {
+                    if (parseInt(response.temperaturas[i].temp) >= 263) {
+                        acumulado += parseInt(response.temperaturas[i].tiempo);
+                    }
+
+                    arr.push([i + 1, acumulado]);
+                }
+
+                console.log(arr);
+                /*var min = 300, max = 0;
                 Object.keys(response.temperaturas).map(function (value, key) {
                     var tempObj = parseInt(response.temperaturas[key].temp);
                     var temp = [key,tempObj];
@@ -21,8 +34,8 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
                 });
                 $scope.min = min;
                 $scope.max = max;
-                $scope.temperaturas = arr;
-                $scope.data = response.temperaturas;
+                $scope.temperaturas = arr;*/
+                $scope.data = arr;
 
             }).
             error(function (response) {
