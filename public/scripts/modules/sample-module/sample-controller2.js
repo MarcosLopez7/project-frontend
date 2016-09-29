@@ -22,19 +22,10 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
 
                     arr.push([i + 1, acumulado]);
                 }
-
-                console.log(arr);
-                var min = 300, max = 0;
-                Object.keys(response.temperaturas).map(function (value, key) {
-                    var tempObj = parseInt(response.temperaturas[key].temp);
-                    var temp = [key,tempObj];
-                    if (tempObj < min) min = tempObj;
-                    if (tempObj > max) max = tempObj;
-                    arr.push(temp);
-                });
-                $scope.min = min;
+                var max = parseInt(arr[arr.length-1][1]);
+                console.log(max);
                 $scope.max = max;
-                $scope.temperaturas = arr;
+                $scope.min = 1;
                 $scope.data = arr;
 
             }).
