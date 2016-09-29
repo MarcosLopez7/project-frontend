@@ -5,11 +5,17 @@
     <input type="number" ng-model="num">
     <button ng-click="consumela()">Submit</button><br>
 
-    serial: {{ num }}
-    ruta: {{ ruta }}
-    <br><br>
-    <px-simple-line-chart width="auto" min={{min}} max={{max}} line-data="{{temperaturas}}" min-label="{{min}}" max-label="{{max}}"></px-simple-line-chart>
+    <div ng-show="cargado">
+        serial: {{ num }}<br>
+        ruta: {{ ruta }}<br>
+        cantidad de vuelos acumulados: {{ num_vuelos }}<br>
+        tiempo promedio que pasa la ruta una temperatura arriba de los 263: {{ prom_temp }}<br>
+        ciclos de rutas restantes: {{ rutas_rest }}, vuelos restantes: {{ vuelos_rest }}<br>
+        lugar de reparación: {{ lugar }}, costo: ${{ costo }}
+    </div>
+        <br><br>
+        <px-simple-line-chart width="auto" min={{min}} max={{max}} line-data="{{temperaturas}}" min-label="{{min}}"
+                              max-label="{{max}}" threshold="263"> </px-simple-line-chart>
 
-    {{ data }}
 
 </px-card>
