@@ -10,7 +10,7 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
             }).
             success(function (response) {
 
-                var arr = []
+                var arr = [];
                 Object.keys(response.temperaturas).map(function (value, key) {
                     var tempObj = response.temperaturas[key];
                     var temp = [key,parseInt(tempObj.temp)];
