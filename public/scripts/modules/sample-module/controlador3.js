@@ -96,7 +96,6 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
                             $scope.sugerencia = "Te recomendamos que antes de empezar el ciclo " + $scope.rutas_rest + " " +
                                 "cambien el motor para evitar cancelaciones"
                         } else {
-                            console.log("que pedo?");
                             $scope.sugerencia = "Te recomendamos que cuando el motor esté en el ciclo " + ($scope.rutas_rest - 1)
                                 + ", específicamente en el vuelo de " + response.ciudades[i - 1].ciudad + " a " + $scope.lugar
                                 + " se programe un cambio de motor para evitar cancelaciones";
