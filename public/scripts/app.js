@@ -39,9 +39,9 @@ define([
             name: 'Predix Dashboard',
             session: {},
             tabs: [
-                {icon: 'fa-line-chart', state: 'first', label: 'Motores dañanos'},
+                {icon: 'fa-line-chart', state: 'first', label: 'Motores dañados'},
                 {icon: 'fa-bar-chart', state: 'second', label: 'Tiempo acumulado'},
-                {icon: 'fa-bar-chart', state: 'third', label: 'Opción'}
+                {icon: 'fa-bar-chart', state: 'third', label: 'Sugerencia'}
             ]
         };
         $http.get('/userinfo').success(function(data) {
