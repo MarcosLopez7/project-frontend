@@ -60,10 +60,18 @@ define(['angular', './sample-module'], function(angular, sampleModule) {
                 headers: {}
             }).success(function (response) {
                 if ($scope.prom_temp > 0) {
-                    $scope.rutas_rest = Math.floor((parseInt(response.tiempo) - $scope.acumulado) / $scope.prom_temp);
-                    getReparacion($scope, $http, $scope.ruta);
+                    if ((parseInt(response.tiempo) - $scope.acumulado) > 0) {
+                        $scope.rutas_rest = Math.floor((parseInt(response.tiempo) - $scope.acumulado) / $scope.prom_temp);
+                        getReparacion($scope, $http, $scope.ruta);
+                    } else {
+                        $scope.rutas_rest = "El motor ya está dañado";
+                        $scope.vuelos_rest = 0;
+                        $scope.cargado = true;
+                    }
                 } else {
                     $scope.rutas_rest = "No hay registros de desgaste en esta ruta";
+                    $scope.vuelos_rest = 0;
+                    $scope.cargado = true;
                 }
             }).error(function (response) {
                 console.log(response);
