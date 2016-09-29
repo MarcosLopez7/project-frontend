@@ -1,16 +1,17 @@
 <px-card header-text='Sugerencia de vuelo'>
 
     <label>Número de vuelo (sólo números de 700103 a 700197)</label>
-    <input type="number" ng-model="num">
-    <button ng-click="consumela()">Submit</button><br>
+    <input type="number" class="inputNumber" ng-model="num">
+    <button class="button button4" ng-click="consumela()">Submit</button><br>
 
     <div ng-show="cargado">
-        serial: {{ num }}<br>
-        ruta: {{ ruta }}<br>
-        cantidad de vuelos acumulados: {{ num_vuelos }}<br>
-        tiempo promedio que pasa la ruta una temperatura arriba de los 263: {{ prom_temp }}<br>
-        ciclos de rutas restantes: {{ rutas_rest }}, vuelos restantes: {{ vuelos_rest }}<br>
-        lugar de reparación: {{ lugar }}, costo: ${{ costo }}
+        <br/>
+        <p><strong>Serial:</strong> {{ num }}</p>
+        <p><strong>Ruta:</strong> {{ ruta }}</p>
+        <p><strong>Cantidad de vuelos acumulados:</strong> {{ num_vuelos }}</p>
+        <p><strong>Tiempo promedio que pasa la ruta una temperatura arriba de los 263:</strong> {{ prom_temp }}</p>
+        <p><strong>Ciclos de rutas restantes:</strong> {{ rutas_rest }} <strong style="padding-left:5em;">Vuelos restantes:</strong> {{ vuelos_rest }}</p>
+        <p><strong>Lugar de reparación:</strong> {{ lugar }} <strong style="padding-left:7em;">Costo:</strong> ${{ costo }}</p>
     </div>
         <br><br>
         <px-simple-line-chart width="auto" min={{min}} max={{max}} line-data="{{temperaturas}}" min-label="{{min}}"
